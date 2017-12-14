@@ -1,4 +1,4 @@
-CPU
+CPU	
 MotherBoard
 Memory
 Storage
@@ -10,3 +10,6 @@ Power Supply
 Brand
 
 Full Build
+
+
+
