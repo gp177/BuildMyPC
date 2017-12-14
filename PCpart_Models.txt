@@ -1,0 +1,12 @@
+CPU
+MotherBoard
+Memory
+Storage
+Video Card
+Case
+Power Supply
+
+=============
+Brand
+
+Full Build
