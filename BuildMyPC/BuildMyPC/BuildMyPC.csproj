@@ -197,8 +197,16 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Case.cs" />
+    <Compile Include="Models\CPU.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Memory.cs" />
+    <Compile Include="Models\Motherboard.cs" />
+    <Compile Include="Models\PowerSupply.cs" />
+    <Compile Include="Models\Storage.cs" />
+    <Compile Include="Models\VideoCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
