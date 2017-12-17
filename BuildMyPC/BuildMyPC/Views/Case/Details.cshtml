@@ -1,0 +1,16 @@
+﻿@model BuildMyPC.Models.Case
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>@Model.Name</h3>
+<ul>
+    <li>Brand: @Model.Brand.BrandName</li>
+    <li>Tower Type: @Model.TowerType</li>
+    <li>Comes with PSU? @Model.ComesWithPowerSupply</li>
+    <li>Price: $@Model.Price</li>
+</ul>
+
+@Html.ActionLink("Back to List", "Index", "Case")
+

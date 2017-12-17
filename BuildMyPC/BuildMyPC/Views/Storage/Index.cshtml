@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BuildMyPC.Models.Storage>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select Storage</h2>
+
+@if (!Model.Any())
+{
+    <p>There is no Storage availble.</p>
+}
+
+else
+{
+
+    <table class="table table-dark table-hover">
+        <thread>
+            <tr>
+                <th>Storage (Click for Details)</th>
+                <th>Form</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thread>
+        <tbody>
+
+            @foreach (var storage in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(storage.Name, "Details", "Storage", new { id = storage.Id }, null)</td>
+                    <td>@storage.Form"</td>
+                    <td>@storage.Size GB</td>
+                    <td>$@storage.Price </td>
+                    <td><a class="btn btn-primary btn-sm" href="#">Add Storage</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+}
+

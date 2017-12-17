@@ -1,0 +1,18 @@
+﻿@model BuildMyPC.Models.Memory
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>@Model.Name</h3>
+<ul>
+    <li>Brand: @Model.Brand.BrandName</li>
+    <li>Speed: @Model.Speed GHz</li>
+    <li>Pin Type: @Model.PinType</li>
+    <li>Size: @Model.Size GB</li>
+    <li>Latency: @Model.Latency</li>
+    <li>Price: $@Model.Price</li>
+</ul>
+
+@Html.ActionLink("Back to List", "Index", "Memory")
+

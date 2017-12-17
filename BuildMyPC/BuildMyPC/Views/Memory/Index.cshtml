@@ -1,0 +1,56 @@
+﻿@model IEnumerable<BuildMyPC.Models.Memory>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select Memory</h2>
+
+
+@if (!Model.Any())
+{
+    <p>There are no Memory availble.</p>
+}
+
+else
+{
+
+    <table class="table table-dark table-hover">
+        <thread>
+            <tr>
+                <th>Memory (Click for Details)</th>
+                <th>Speed</th>
+                <th>Size</th>
+                <th>Price</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thread>
+        <tbody>
+
+            @foreach (var memory in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(memory.Name, "Details", "Memory", new { id = memory.Id }, null)</td>
+                    <td>@memory.Speed</td>
+                    <td>@memory.Size</td>
+                    <td>$@memory.Price</td>
+                    <td><a class="btn btn-primary btn-sm" href="#">Add Memory</a></td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+}
+
+
