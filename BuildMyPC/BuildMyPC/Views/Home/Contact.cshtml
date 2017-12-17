@@ -1,17 +1,49 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<h2>Contact Us</h2>
 
-<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>
+<head>
+    <style>
+        #map {
+            height: 400px;
+            width: 600px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <address>
+        Some Street<br />
+        Montreal, QC<br />
+        <abbr title="Phone">P:</abbr>
+        514-999-9999
+    </address>
+
+    <address>
+        <strong>Email:</strong>   <a href="mailto:BuildMyPC@gmail.com">BuildMyPC@gmail.com</a><br />
+       
+    </address>
+    <hr />
+
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var uluru = { lat: 45.470129, lng: -73.7674116 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 4,
+                center: uluru
+            });
+            var marker = new google.maps.Marker({
+                position: uluru,
+                map: map
+            });
+        }
+    </script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB62c-I0LVBmhL2TEmrrly5IS1rzNZ3-Ys&callback=initMap">
+    </script>
+</body>
+
