@@ -20,6 +20,16 @@ namespace BuildMyPC.Models
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
+        public DbSet<Brand> Brands { get; set; }
+        public DbSet<Case> Cases { get; set; }
+        public DbSet<CPU> CPUS { get; set; }
+        public DbSet<Memory> Memory { get; set; }
+        public DbSet<Motherboard> Motherboards { get; set; }
+        public DbSet<PowerSupply> PowerSupplies { get; set; }
+        public DbSet<Storage> Storage { get; set; }
+        public DbSet<VideoCard> VideoCards { get; set; }
+
+
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {

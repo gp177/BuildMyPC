@@ -12,7 +12,7 @@ namespace BuildMyPC.Models
 
         [Required]
         [MaxLength(40)]
-        public int Name { get; set; }
+        public string Name { get; set; }
         [Required]
         public Brand Brand { get; set; }
         public int BrandId { get; set; }
