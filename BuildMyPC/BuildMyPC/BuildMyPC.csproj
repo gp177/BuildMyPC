@@ -224,6 +224,7 @@
     <Compile Include="Models\VideoCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\IndexListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -300,10 +301,12 @@
     <Content Include="Views\Storage\Details.cshtml" />
     <Content Include="Views\VideoCard\Index.cshtml" />
     <Content Include="Views\VideoCard\Details.cshtml" />
+    <Content Include="Views\Home\List.cshtml" />
+    <Content Include="Views\Home\Share.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="ViewModels\" />
+    <Folder Include="Views\List\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

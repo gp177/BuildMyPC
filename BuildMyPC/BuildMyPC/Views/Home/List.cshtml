@@ -1,0 +1,74 @@
+﻿@model BuildMyPC.ViewModels.IndexListViewModel
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Part List Builder</h2>
+<hr />
+
+<table class="table table-dark table-hover">
+    <thread>
+        <tr>
+            <th>Component</th>
+            <th>Selection</th>
+
+
+
+        </tr>
+    </thread>
+    <tbody>
+
+
+        <tr>
+            <td>Cpu</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
+            </td>
+        </tr>
+        <tr> 
+            <td>Motherboard</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/Motherboard/Index">Pick a Motherboard</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/Memory/Index">Pick Memory</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Video Card</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Pick a Video Card</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/Storage/Index">Pick a Storage</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Power Supply</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Pick a Power Supply</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Case</td>
+            <td>
+                <a class="btn btn-primary btn-sm" href="~/Case/Index">Pick a Case</a>
+            </td>
+        </tr>
+        <tr style="font-weight:bold">
+            <td>Total Price</td>
+            <td>$0.00</td>
+        </tr>
+
+    </tbody>
+</table>
+
+
+<a class="btn btn-primary" href="#">Share your Build!</a>
