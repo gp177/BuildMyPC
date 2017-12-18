@@ -33,14 +33,17 @@ else
        
                         @foreach (var cpu in Model)
                         {
-                            <tr>
-                             <td>@Html.ActionLink(cpu.Name, "Details", "CPU", new { id = cpu.Id }, null)</td>
-                            <td>@cpu.Speed GHz</td>
-                                <td>@cpu.Cores</td>
-                                <td>$@cpu.Price </td>
-                                <td>@Html.ActionLink("Add Cpu", "AddCpu", "CPU", new { id = cpu.Id }, null)</td>
+        <tr>
+            <td>@Html.ActionLink(cpu.Name, "Details", "CPU", new { id = cpu.Id }, null)</td>
+            <td>@cpu.Speed GHz</td>
+            <td>@cpu.Cores</td>
+            <td>$@cpu.Price </td>
 
-                            </tr>
+                       
+            
+           <td>@Html.ActionLink("Add Cpu", "AddCpu", "CPU", new { id = cpu.Id, Name=cpu.Name}, null)</td>
+
+        </tr>
                         }
     </tbody>
 </table>

@@ -190,6 +190,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BuildController.cs" />
     <Compile Include="Controllers\CaseController.cs" />
     <Compile Include="Controllers\CPUController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="Models\VideoCard.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\BuildViewModel.cs" />
     <Compile Include="ViewModels\IndexListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -308,6 +310,7 @@
     <Content Include="Views\VideoCard\Details.cshtml" />
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\Share.cshtml" />
+    <Content Include="Views\Build\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
