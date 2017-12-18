@@ -53,6 +53,7 @@ namespace BuildMyPC.Controllers
                 StorageBrand = _context.Brands.Where(m => m.Id == storage.BrandId).SingleOrDefault()
 
             };
+            ViewBag.Total = cpu.Price + Case.Price + videoCard.Price + motherBoard.Price + powerSupply.Price + memory.Price + storage.Price;
             return View("Index", build);
         }
     }
