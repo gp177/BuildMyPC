@@ -210,9 +210,14 @@
     <Compile Include="Migrations\201712170103200_fixes.Designer.cs">
       <DependentUpon>201712170103200_fixes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712180143115_createBuildTable.cs" />
+    <Compile Include="Migrations\201712180143115_createBuildTable.Designer.cs">
+      <DependentUpon>201712180143115_createBuildTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Brand.cs" />
+    <Compile Include="Models\Build.cs" />
     <Compile Include="Models\Case.cs" />
     <Compile Include="Models\CPU.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -327,6 +332,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712170103200_fixes.resx">
       <DependentUpon>201712170103200_fixes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712180143115_createBuildTable.resx">
+      <DependentUpon>201712180143115_createBuildTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

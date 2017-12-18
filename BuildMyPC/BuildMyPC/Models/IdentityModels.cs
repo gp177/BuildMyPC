@@ -28,6 +28,7 @@ namespace BuildMyPC.Models
         public DbSet<PowerSupply> PowerSupplies { get; set; }
         public DbSet<Storage> Storage { get; set; }
         public DbSet<VideoCard> VideoCards { get; set; }
+        public DbSet<Build> Builds { get; set; }
 
 
         public ApplicationDbContext()
