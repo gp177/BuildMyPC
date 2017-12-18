@@ -21,13 +21,37 @@ namespace BuildMyPC.Controllers
         // GET: Build
         public ActionResult Index()
         {
-
-            
+            Case Case = (Case)Session["cases"];
+            CPU cpu = (CPU)Session["Cpu"];
+            VideoCard videoCard = (VideoCard)Session["videocard"];
+            Motherboard motherBoard = (Motherboard)Session["motherboard"];
+            PowerSupply powerSupply=(PowerSupply)Session["powersupply"];
+            Memory memory=(Memory)Session["memory"];
+            Storage storage=(Storage)Session["storage"];
             var build = new BuildViewModel()
             {
-                cpu = (CPU)Session["Cpu"]
+                Cpu = cpu,
+                CpuBrand=_context.Brands.Where(m=>m.Id==cpu.BrandId).SingleOrDefault(),
 
-        };
+                Case = Case,
+                CaseBrand = _context.Brands.Where(m => m.Id == Case.BrandId).SingleOrDefault(),
+
+                Videocard = videoCard,
+                VideocardBrand = _context.Brands.Where(m => m.Id == videoCard.BrandId).SingleOrDefault(),
+
+                Motherboard  = motherBoard,
+                MotherboardBrand = _context.Brands.Where(m => m.Id == motherBoard.BrandId).SingleOrDefault(),
+
+                Powersupply = powerSupply,
+                PowersupplyBrand = _context.Brands.Where(m => m.Id == powerSupply.BrandId).SingleOrDefault(),
+
+                Memory = memory,
+                MemoryBrand = _context.Brands.Where(m => m.Id == memory.BrandId).SingleOrDefault(),
+
+                Storage = storage,
+                StorageBrand = _context.Brands.Where(m => m.Id == storage.BrandId).SingleOrDefault()
+
+            };
             return View("Index", build);
         }
     }

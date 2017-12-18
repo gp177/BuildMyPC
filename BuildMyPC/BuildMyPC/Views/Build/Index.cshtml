@@ -4,8 +4,105 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
-<p>@Model.cpu.Brand</p>
-<p>@Model.cpu.Name</p>
-<p>@Model.cpu.Speed</p>
-<p>@Model.cpu.Price</p>
+<h2>Build</h2>
+<hr/>
+
+<table>
+    <tr>
+        <th>Component</th>
+        <th>Price</th>
+    </tr>
+    
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>Mother Board</b></li>
+                <li>@Model.MemoryBrand.BrandName ,@Model.Motherboard.Name, Socket:@Model.Motherboard.Socket  </li>
+            </ul>
+        </td>
+        <td>
+            @Model.Powersupply.Price $
+        </td>
+    </tr>
+    
+    
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>CPU</b></li>
+                <li>@Model.CpuBrand.BrandName ,@Model.Cpu.Name, @Model.Cpu.Speed MHz</li>
+            </ul>
+        </td>
+        <td>
+            @Model.Cpu.Price $
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>Memory</b></li>
+                <li>@Model.MemoryBrand.BrandName ,@Model.Memory.Name, @Model.Memory.Size MHz</li>
+            </ul>
+        </td>
+        <td>
+            @Model.Memory.Price $
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>Storage</b></li>
+                <li>@Model.StorageBrand.BrandName ,@Model.Storage.Name, @Model.Storage.Size Gb</li>
+            </ul>
+        </td>
+        <td>
+            @Model.Storage.Price $
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>Storage</b></li>
+                <li>@Model.VideocardBrand.BrandName ,@Model.Videocard.Name, @Model.Videocard.Memory Gb</li>
+            </ul>
+        </td>
+        <td>
+            @Model.Videocard.Price $
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>Case</b></li>
+                <li>@Model.CaseBrand.BrandName ,@Model.Case.Name</li>
+            </ul>
+        </td>
+        <td>
+            @Model.Case.Price $
+        </td>
+    </tr>
+
+    <tr>
+        <td>
+            <ul class="list-unstyled">
+                <li><b>Power Supply</b></li>
+                <li>@Model.PowersupplyBrand.BrandName ,@Model.Powersupply.Name, @Model.Powersupply.Efficiency </li>
+            </ul>
+        </td>
+        <td>
+            @Model.Powersupply.Price $
+        </td>
+    </tr>
+
+
+
+
+
+
+
+
+</table>
