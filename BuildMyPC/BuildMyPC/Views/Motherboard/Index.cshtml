@@ -37,7 +37,7 @@ else
                     <td>@motherboards.FormFactor</td>
                     <td>@motherboards.MaxRAM GB</td>
                     <td>$@motherboards.Price</td>
-                    <td><a class="btn btn-primary btn-sm" href="#">Add Motherboard</a></td>
+                    <td>@Html.ActionLink("Add Motherboard", "Addmotherboard", "Motherboard", new { id = motherboards.Id }, null)</td>
 
                 </tr>
             }

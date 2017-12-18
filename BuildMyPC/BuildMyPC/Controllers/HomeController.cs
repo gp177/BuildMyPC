@@ -29,6 +29,8 @@ namespace BuildMyPC.Controllers
 
         public ActionResult List()
         {
+          
+
             return View();
         }
 

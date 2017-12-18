@@ -33,5 +33,12 @@ namespace BuildMyPC.Controllers
 
             return View(motherboards);
         }
+
+        public ActionResult Addmotherboard(Motherboard motherboard)
+        {
+            Session["motherboard"] = motherboard;
+
+            return RedirectToAction("List", "Home");
+        }
     }
 }

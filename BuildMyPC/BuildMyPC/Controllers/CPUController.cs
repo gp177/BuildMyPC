@@ -35,5 +35,12 @@ namespace BuildMyPC.Controllers
 
             return View(cpus);
         }
+
+        public ActionResult AddCpu(CPU cpu)
+        {
+            Session["Cpu"] = cpu;
+
+            return RedirectToAction("List", "Home");
+        }
     }
 }

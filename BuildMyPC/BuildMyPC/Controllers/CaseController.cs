@@ -35,5 +35,12 @@ namespace BuildMyPC.Controllers
 
             return View(cases);
         }
+
+        public ActionResult AddCase(Case cases)
+        {
+            Session["cases"] = cases;
+
+            return RedirectToAction("List", "Home");
+        }
     }
 }

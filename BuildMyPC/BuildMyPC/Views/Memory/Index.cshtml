@@ -36,7 +36,7 @@ else
                     <td>@memory.Speed</td>
                     <td>@memory.Size</td>
                     <td>$@memory.Price</td>
-                    <td><a class="btn btn-primary btn-sm" href="#">Add Memory</a></td>
+                    <td>@Html.ActionLink("Add Memory", "Addmemory", "Memory", new { id = memory.Id }, null)</td>
 
                 </tr>
             }

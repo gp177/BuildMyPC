@@ -34,5 +34,12 @@ namespace BuildMyPC.Controllers
 
             return View(powersupply);
         }
+
+        public ActionResult Addpowersupply(PowerSupply powersupply)
+        {
+            Session["powersupply"] = powersupply;
+
+            return RedirectToAction("List", "Home");
+        }
     }
 }

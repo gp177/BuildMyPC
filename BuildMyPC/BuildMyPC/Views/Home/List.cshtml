@@ -23,19 +23,43 @@
         <tr>
             <td>Cpu</td>
             <td>
+                 @{ var cpu = Session["Cpu"]; }
+                @if (cpu != null)
+                {
+                   <p>test</p>
+                }
+                else
+                {
                 <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
+                }
             </td>
         </tr>
         <tr> 
             <td>Motherboard</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="~/Motherboard/Index">Pick a Motherboard</a>
+                @{ var motherboard = Session["motherboard"]; }
+                @if (motherboard != null)
+    {
+            <p>test</p>
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/MotherBoard/Index">Pick a Motherboard</a>
+}
             </td>
         </tr>
         <tr>
             <td>Memory</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="~/Memory/Index">Pick Memory</a>
+                @{ var memory = Session["memory"]; }
+                @if (memory != null)
+    {
+            <p>test</p>
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/Memory/Index">Pick Memory</a>
+}
             </td>
         </tr>
         <tr>
@@ -47,19 +71,44 @@
         <tr>
             <td>Storage</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="~/Storage/Index">Pick a Storage</a>
+                
+                @{ var storage = Session["storage"]; }
+                @if (storage != null)
+    {
+            <p>test</p>
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/Storage/Index">Pick Storage</a>
+}
             </td>
         </tr>
         <tr>
             <td>Power Supply</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Pick a Power Supply</a>
+                @{ var powersupply = Session["powersupply"]; }
+                @if (powersupply != null)
+    {
+            <p>test</p>
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Pick a PowerSupply</a>
+}
             </td>
         </tr>
         <tr>
             <td>Case</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="~/Case/Index">Pick a Case</a>
+                @{ var cases = Session["cases"]; }
+                @if (cases != null)
+    {
+            <p>test</p>
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/Case/Index">Pick a Case</a>
+}
             </td>
         </tr>
         <tr style="font-weight:bold">

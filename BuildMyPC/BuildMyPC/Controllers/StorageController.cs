@@ -33,5 +33,12 @@ namespace BuildMyPC.Controllers
 
             return View(storage);
         }
+
+        public ActionResult Addstorage(Storage storage)
+        {
+            Session["storage"] = storage;
+
+            return RedirectToAction("List", "Home");
+        }
     }
 }
