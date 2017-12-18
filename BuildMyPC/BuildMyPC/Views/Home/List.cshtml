@@ -1,7 +1,8 @@
 ﻿@model BuildMyPC.ViewModels.IndexListViewModel
+
 @{
     ViewBag.Title = "List";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Part List Builder</h2>
@@ -23,29 +24,29 @@
         <tr>
             <td>Cpu</td>
             <td>
-                 @{ var cpu = Session["Cpu"]; }
-                @if (cpu != null)
+                @{ @Model.Cpu = Session["Cpu"]; }
+                @if (Model.Cpu != null)
                 {
-                   <p>@cpu</p>
+                <p>@Model.Cpu.Name</p>
                 }
                 else
                 {
-                <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
+                    <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
                 }
             </td>
         </tr>
-        <tr> 
+        <tr>
             <td>Motherboard</td>
             <td>
                 @{ var motherboard = Session["motherboard"]; }
                 @if (motherboard != null)
-    {
-            <p>test</p>
-}
-else
-{
-            <a class="btn btn-primary btn-sm" href="~/MotherBoard/Index">Pick a Motherboard</a>
-}
+                {
+                    <p>test</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/MotherBoard/Index">Pick a Motherboard</a>
+                }
             </td>
         </tr>
         <tr>
@@ -53,13 +54,13 @@ else
             <td>
                 @{ var memory = Session["memory"]; }
                 @if (memory != null)
-    {
-            <p>test</p>
-}
-else
-{
-            <a class="btn btn-primary btn-sm" href="~/Memory/Index">Pick Memory</a>
-}
+                {
+                    <p>test</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/Memory/Index">Pick Memory</a>
+                }
             </td>
         </tr>
         <tr>
@@ -67,28 +68,28 @@ else
             <td>
                 @{ var videocard = Session["videocard"]; }
                 @if (videocard != null)
-    {
-            <p>test</p>
-}
-else
-{
-            <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Pick a Video Card</a>
-}
+                {
+                    <p>test</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Pick a Video Card</a>
+                }
             </td>
         </tr>
         <tr>
             <td>Storage</td>
             <td>
-                
+
                 @{ var storage = Session["storage"]; }
                 @if (storage != null)
-    {
-            <p>test</p>
-}
-else
-{
-            <a class="btn btn-primary btn-sm" href="~/Storage/Index">Pick Storage</a>
-}
+                {
+                    <p>test</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/Storage/Index">Pick Storage</a>
+                }
             </td>
         </tr>
         <tr>
@@ -96,13 +97,13 @@ else
             <td>
                 @{ var powersupply = Session["powersupply"]; }
                 @if (powersupply != null)
-    {
-            <p>test</p>
-}
-else
-{
-            <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Pick a PowerSupply</a>
-}
+                {
+                    <p>test</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Pick a PowerSupply</a>
+                }
             </td>
         </tr>
         <tr>
@@ -110,13 +111,13 @@ else
             <td>
                 @{ var cases = Session["cases"]; }
                 @if (cases != null)
-    {
-            <p>test</p>
-}
-else
-{
-            <a class="btn btn-primary btn-sm" href="~/Case/Index">Pick a Case</a>
-}
+                {
+                    <p>test</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/Case/Index">Pick a Case</a>
+                }
             </td>
         </tr>
         <tr style="font-weight:bold">

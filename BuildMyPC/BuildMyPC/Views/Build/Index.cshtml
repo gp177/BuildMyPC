@@ -10,9 +10,10 @@
 <table>
     <tr>
         <th>Component</th>
+        <th>&nbsp;</th>
         <th>Price</th>
     </tr>
-    
+
     <tr>
         <td>
             <ul class="list-unstyled">
@@ -20,12 +21,13 @@
                 <li>@Model.MotherboardBrand.BrandName ,@Model.Motherboard.Name, Socket:@Model.Motherboard.Socket  </li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Powersupply.Price $
         </td>
     </tr>
-    
-    
+
+
     <tr>
         <td>
             <ul class="list-unstyled">
@@ -33,6 +35,7 @@
                 <li>@Model.CpuBrand.BrandName ,@Model.Cpu.Name, @Model.Cpu.Speed MHz</li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Cpu.Price $
         </td>
@@ -45,6 +48,7 @@
                 <li>@Model.MemoryBrand.BrandName ,@Model.Memory.Name, @Model.Memory.Size MHz</li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Memory.Price $
         </td>
@@ -57,6 +61,7 @@
                 <li>@Model.StorageBrand.BrandName ,@Model.Storage.Name, @Model.Storage.Size Gb</li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Storage.Price $
         </td>
@@ -65,10 +70,11 @@
     <tr>
         <td>
             <ul class="list-unstyled">
-                <li><b>Storage</b></li>
+                <li><b>Video Card</b></li>
                 <li>@Model.VideocardBrand.BrandName ,@Model.Videocard.Name, @Model.Videocard.Memory Gb</li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Videocard.Price $
         </td>
@@ -81,6 +87,7 @@
                 <li>@Model.CaseBrand.BrandName ,@Model.Case.Name</li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Case.Price $
         </td>
@@ -93,11 +100,20 @@
                 <li>@Model.PowersupplyBrand.BrandName ,@Model.Powersupply.Name, @Model.Powersupply.Efficiency </li>
             </ul>
         </td>
+        <td>&nbsp;</td>
         <td>
             @Model.Powersupply.Price $
         </td>
     </tr>
+    <tr>
+       
+        <td>&nbsp;</td>
+        <td><b>Total:</b></td>
+        <td>
+           @{ var sum = @Model.Powersupply.Price+@Model.Case.Price}
 
+        </td>
+    </tr>
 
 
 
