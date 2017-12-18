@@ -10,6 +10,7 @@ namespace BuildMyPC.ViewModels
     {
 
         public Build builds { get; set; }
+
         public Case Case { get; set; }
         public Brand CaseBrand { get; set; }
 

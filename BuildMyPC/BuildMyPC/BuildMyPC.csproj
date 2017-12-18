@@ -215,6 +215,10 @@
     <Compile Include="Migrations\201712180143115_createBuildTable.Designer.cs">
       <DependentUpon>201712180143115_createBuildTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712182147239_populateStorageTable.cs" />
+    <Compile Include="Migrations\201712182147239_populateStorageTable.Designer.cs">
+      <DependentUpon>201712182147239_populateStorageTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -338,6 +342,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712180143115_createBuildTable.resx">
       <DependentUpon>201712180143115_createBuildTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712182147239_populateStorageTable.resx">
+      <DependentUpon>201712182147239_populateStorageTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

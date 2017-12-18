@@ -30,9 +30,10 @@ namespace BuildMyPC.Controllers
             Storage storage=(Storage)Session["storage"];
             var build = new BuildViewModel()
             {
+                
                 Cpu = cpu,
-                CpuBrand=_context.Brands.Where(m=>m.Id==cpu.BrandId).SingleOrDefault(),
-
+                CpuBrand = _context.Brands.Where(m => m.Id == cpu.BrandId).SingleOrDefault(),
+                
                 Case = Case,
                 CaseBrand = _context.Brands.Where(m => m.Id == Case.BrandId).SingleOrDefault(),
 
