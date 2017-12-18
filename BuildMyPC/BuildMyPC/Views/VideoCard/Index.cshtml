@@ -30,14 +30,14 @@ else
 
             @foreach (var videocard in Model)
             {
-                <tr>
-                    <td>@Html.ActionLink(videocard.Name, "Details", "VideoCard", new { id = videocard.Id }, null)</td>
-                    <td>@videocard.Memory</td>
-                    <td>@videocard.CoreClock</td>
-                    <td>$@videocard.Price </td>
-                    <td><a class="btn btn-primary btn-sm" href="#">Add Video Card</a></td>
+            <tr>
+                <td>@Html.ActionLink(videocard.Name, "Details", "VideoCard", new { id = videocard.Id }, null)</td>
+                <td>@videocard.Memory</td>
+                <td>@videocard.CoreClock</td>
+                <td>$@videocard.Price </td>
+                <td>@Html.ActionLink("Add Video Card", "Addvideocard", "VideoCard", videocard, null)</td>
 
-                </tr>
+            </tr>
             }
         </tbody>
     </table>

@@ -35,7 +35,7 @@ else
                     <td>@storage.Form"</td>
                     <td>@storage.Size GB</td>
                     <td>$@storage.Price </td>
-                    <td>@Html.ActionLink("Add Storage", "Addstorage", "Storage", new { id = storage.Id }, null)</td>
+                    <td>@Html.ActionLink("Add Storage", "Addstorage", "Storage", storage, null)</td>
 
                 </tr>
             }

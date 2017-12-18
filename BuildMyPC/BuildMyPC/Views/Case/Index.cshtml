@@ -35,7 +35,7 @@ else
                     <td>@cases.TowerType</td>
                     <td>@cases.ComesWithPowerSupply</td>
                     <td>$@cases.Price </td>
-                    <td>@Html.ActionLink("Add Case", "AddCase", "Case", new { id = cases.Id }, null)</td>
+                    <td>@Html.ActionLink("Add Case", "AddCase", "Case",cases, null)</td>
 
 </tr>
             }

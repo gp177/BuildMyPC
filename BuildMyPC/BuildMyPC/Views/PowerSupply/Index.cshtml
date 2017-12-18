@@ -35,7 +35,7 @@ else
                     <td>@powersupply.Efficiency</td>
                     <td>@powersupply.Watts W</td>
                     <td>$@powersupply.Price </td>
-                    <td>@Html.ActionLink("Add Memory", "Addpowersupply", "PowerSupply", new { id = powersupply.Id }, null)</td>
+                    <td>@Html.ActionLink("Add Memory", "Addpowersupply", "PowerSupply", powersupply, null)</td>
 
                 </tr>
             }
