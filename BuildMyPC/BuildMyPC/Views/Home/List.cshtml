@@ -26,7 +26,7 @@
                  @{ var cpu = Session["Cpu"]; }
                 @if (cpu != null)
                 {
-                   <p>test</p>
+                   <p>@cpu</p>
                 }
                 else
                 {
@@ -65,7 +65,15 @@ else
         <tr>
             <td>Video Card</td>
             <td>
-                <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Pick a Video Card</a>
+                @{ var videocard = Session["videocard"]; }
+                @if (videocard != null)
+    {
+            <p>test</p>
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Pick a Video Card</a>
+}
             </td>
         </tr>
         <tr>

@@ -364,3 +364,4 @@ D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.csproj.GenerateResource.Cach
 D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.csproj.CoreCompileInputs.cache
 D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.dll
 D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.pdb
+C:\Users\GP\Desktop\School\BuildMyPC\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.createBuildTable.resources
