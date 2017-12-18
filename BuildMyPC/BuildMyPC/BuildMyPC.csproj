@@ -219,6 +219,10 @@
     <Compile Include="Migrations\201712182147239_populateStorageTable.Designer.cs">
       <DependentUpon>201712182147239_populateStorageTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712182201020_populateVideoCards.cs" />
+    <Compile Include="Migrations\201712182201020_populateVideoCards.Designer.cs">
+      <DependentUpon>201712182201020_populateVideoCards.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Brand.cs" />
@@ -345,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201712182147239_populateStorageTable.resx">
       <DependentUpon>201712182147239_populateStorageTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712182201020_populateVideoCards.resx">
+      <DependentUpon>201712182201020_populateVideoCards.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
