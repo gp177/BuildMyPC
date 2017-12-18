@@ -35,7 +35,7 @@ else
                 <td>@videocard.Memory</td>
                 <td>@videocard.CoreClock</td>
                 <td>$@videocard.Price </td>
-                <td>@Html.ActionLink("Add Video Card", "Addvideocard", "VideoCard", new { id = videocard.Id }, null)</td>
+                <td>@Html.ActionLink("Add Video Card", "Addvideocard", "VideoCard", videocard, null)</td>
 
             </tr>
             }
