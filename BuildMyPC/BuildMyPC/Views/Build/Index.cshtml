@@ -12,7 +12,7 @@
         <th>Component</th>
         <th>Price</th>
     </tr>
-    
+
     <tr>
         <td>
             <ul class="list-unstyled">
@@ -24,8 +24,8 @@
             @Model.Powersupply.Price $
         </td>
     </tr>
-    
-    
+
+
     <tr>
         <td>
             <ul class="list-unstyled">
@@ -65,7 +65,7 @@
     <tr>
         <td>
             <ul class="list-unstyled">
-                <li><b>Storage</b></li>
+                <li><b>Video Card</b></li>
                 <li>@Model.VideocardBrand.BrandName ,@Model.Videocard.Name, @Model.Videocard.Memory Gb</li>
             </ul>
         </td>
@@ -96,6 +96,11 @@
         <td>
             @Model.Powersupply.Price $
         </td>
+    </tr>
+    <tr>
+        
+        <td><b>Total Price: </b></td>
+        <td><b>$@ViewBag.Total</b></td>
     </tr>
 
 
