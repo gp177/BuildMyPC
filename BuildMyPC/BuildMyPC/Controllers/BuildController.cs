@@ -22,14 +22,12 @@ namespace BuildMyPC.Controllers
         public ActionResult Index()
         {
 
-            var id = (Int32)Session["Cpu"];
-            var cpu =_context.CPUS.Where(m=>m.Id==id).SingleOrDefault();
-
+            
             var build = new BuildViewModel()
             {
-                cpu = cpu
-                
-            };
+                cpu = (CPU)Session["Cpu"]
+
+        };
             return View("Index", build);
         }
     }
