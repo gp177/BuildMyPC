@@ -1,8 +1,11 @@
-﻿@model BuildMyPC.Models.Build
+﻿@model BuildMyPC.ViewModels.BuildViewModel
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
-<p>@Model.CPU.Name</p>
+<p>@Model.cpu.Brand</p>
+<p>@Model.cpu.Name</p>
+<p>@Model.cpu.Speed</p>
+<p>@Model.cpu.Price</p>
