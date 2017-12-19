@@ -2,12 +2,16 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace BuildMyPC.Models
 {
     public class Build
     {
         public int Id { get; set; }
+
+        [Required]
+        public string  Name { get; set; }
 
 
         public CPU CPU { get; set; }
