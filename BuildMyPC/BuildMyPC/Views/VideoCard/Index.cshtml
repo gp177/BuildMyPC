@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BuildMyPC.Models.VideoCard>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select a Video Card</h2>
+
+@if (!Model.Any())
+{
+    <p>There are no Video Cards availble.</p>
+}
+
+else
+{
+
+    <table class="table table-dark table-hover">
+        <thread>
+            <tr>
+                <th>Video Card (Click for Details)</th>
+                <th>Memory</th>
+                <th>Core Clock</th>
+                <th>Price</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thread>
+        <tbody>
+
+            @foreach (var videocard in Model)
+            {
+            <tr>
+                <td>@Html.ActionLink(videocard.Name, "Details", "VideoCard", new { id = videocard.Id }, null)</td>
+                <td>@videocard.Memory</td>
+                <td>@videocard.CoreClock</td>
+                <td>$@videocard.Price </td>
+                <td>@Html.ActionLink("Add Video Card", "Addvideocard", "VideoCard", videocard, null)</td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+}
+

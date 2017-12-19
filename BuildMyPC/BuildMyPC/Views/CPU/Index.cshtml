@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BuildMyPC.Models.CPU>
+
+@{
+                /**/
+
+                ViewBag.Title = "Index";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select CPU</h2>
+
+@if (!Model.Any())
+{
+    <p>There are no CPUs availble.</p>
+}
+
+else
+{
+
+<table class="table table-dark table-hover">
+    <thread>
+        <tr>
+            
+            <th>CPU (Click for Details)</th>
+            <th>Speed</th>
+            <th>Cores</th>
+            <th>Price</th>
+            <th>Action</th>
+            
+            
+        </tr>
+    </thread>
+    <tbody>
+       
+                        @foreach (var cpu in Model)
+                        {
+        <tr>
+           
+            <td>@Html.ActionLink(cpu.Name, "Details", "CPU", new { id = cpu.Id }, null)</td>
+            <td>@cpu.Speed GHz</td>
+            <td>@cpu.Cores</td>
+            <td>$@cpu.Price </td>
+
+                       
+            
+           <td>@Html.ActionLink("Add Cpu", "AddCpu", "CPU", cpu, null)</td>
+
+        </tr>
+                        }
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+}

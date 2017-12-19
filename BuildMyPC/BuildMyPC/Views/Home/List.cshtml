@@ -1,0 +1,139 @@
+﻿@model BuildMyPC.ViewModels.IndexListViewModel
+
+@{
+                /**/
+
+                ViewBag.Title = "List";
+                Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Part List Builder</h2>
+<hr />
+
+
+<table class="table table-dark table-hover">
+    <thread>
+        <tr>
+            <th>Component</th>
+            <th>Selection</th>
+
+
+
+        </tr>
+    </thread>
+    <tbody>
+
+
+        <tr>
+            <td>Cpu</td>
+            <td>
+                @{ var cpu = Session["Cpu"]; var cpuname = Session["Cpuname"]; }
+                @if (cpu != null)
+                {
+                    <p>@cpuname</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Motherboard</td>
+            <td>
+                @{ var motherboard = Session["motherboard"]; var motherboardname = Session["motherboardname"]; }
+                @if (motherboard != null)
+                {
+                    <p>@motherboardname</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/MotherBoard/Index">Pick a Motherboard</a>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Memory</td>
+            <td>
+                @{ var memory = Session["memory"]; var memoryname = Session["memoryname"]; }
+                @if (memory != null)
+                {
+                    <p>@memoryname</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/Memory/Index">Pick Memory</a>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Video Card</td>
+            <td>
+                @{ var videocard = Session["videocard"]; var videocardname = Session["videocardname"]; }
+                @if (videocard != null)
+                {
+                    <p>@videocardname</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Pick a Video Card</a>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>
+
+                @{ var storage = Session["storage"]; var storagename = Session["storagename"]; }
+                @if (storage != null)
+                {
+                    <p>@storagename</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/Storage/Index">Pick Storage</a>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Power Supply</td>
+            <td>
+                @{ var powersupply = Session["powersupply"]; var powersupplyname = Session["powersupplyname"]; }
+                @if (powersupply != null)
+                {
+                    <p>@powersupplyname</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Pick a PowerSupply</a>
+                }
+            </td>
+        </tr>
+        <tr>
+            <td>Case</td>
+            <td>
+                @{ var cases = Session["cases"]; var casesname = Session["casesname"]; }
+                @if (cases != null)
+                {
+                    <p>@casesname</p>
+                }
+                else
+                {
+                    <a class="btn btn-primary btn-sm" href="~/Case/Index">Pick a Case</a>
+                }
+            </td>
+        </tr>
+
+    </tbody>
+</table>
+
+@if (cpu == null || motherboard == null || memory == null || videocard == null || storage == null || powersupply == null || cases == null)
+{
+    <span style="border: 1px solid black" class="btn btn-default">Must Select All parts to view Build</span>
+}
+else
+{
+
+<span style="border: 1px solid black" class="btn btn-default">@Html.ActionLink("View my Build!", "Index", "Build")</span>
+}
+
