@@ -119,12 +119,6 @@
 
 </table>
 
-@using (Html.BeginForm("Save", "Build"))
-{
-<div class="form-group">
-    @Html.Label("Build Name")
-    @Html.TextBoxFor(m => m.builds.Name, new { @class = "form-control" })
-    @Html.ValidationMessageFor(m => m.builds.Name)
-    <button type="submit" class="btn btn-primary">Save</button>
-</div>
-}
+
+<span class="btn btn-default">@Html.ActionLink("Save build", "Save","Build" )</span>
+

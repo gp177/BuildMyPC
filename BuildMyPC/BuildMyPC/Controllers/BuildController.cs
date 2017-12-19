@@ -56,7 +56,8 @@ namespace BuildMyPC.Controllers
             ViewBag.Total = cpu.Price + Case.Price + videoCard.Price + motherBoard.Price + powerSupply.Price + memory.Price + storage.Price;
             return View("Index", build);
         }
-        public ActionResult Save(Build b)
+     
+        public ActionResult Save()
         {
             Build build = new Build();
             Case Case = (Case)Session["cases"];
@@ -67,8 +68,7 @@ namespace BuildMyPC.Controllers
             Memory memory = (Memory)Session["memory"];
             Storage storage = (Storage)Session["storage"];
 
-           
-            build.Name = b.Name;
+            
             build.CaseId = Case.Id;
             build.MemoryId = memory.Id;
             build.VideoCardId = videoCard.Id;
@@ -80,7 +80,7 @@ namespace BuildMyPC.Controllers
             _context.Builds.Add(build);
             _context.SaveChanges();
             
-            return View();
+            return View("AllBuilds");
         }
 
     }
