@@ -80,7 +80,7 @@ namespace BuildMyPC.Controllers
             _context.Builds.Add(build);
             _context.SaveChanges();
             
-            return View("AllBuilds");
+            return RedirectToAction("AllBuilds");
         }
 
         public ActionResult AllBuilds()
