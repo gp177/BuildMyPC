@@ -29,13 +29,15 @@
             <td>
                 @{ var cpu = Session["Cpu"]; var cpuname = Session["Cpuname"]; }
                 @if (cpu != null)
-                {
-                    <p>@cpuname</p>
-                }
-                else
-                {
-                    <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
-                }
+    {
+            <p>@cpuname | <a class="btn btn-primary btn-sm" href="~/CPU/Index">Change Cpu</a></p>
+            
+
+}
+else
+{
+            <a class="btn btn-primary btn-sm" href="~/CPU/Index">Pick a Cpu</a>
+}
             </td>
         </tr>
         <tr>
@@ -44,7 +46,7 @@
                 @{ var motherboard = Session["motherboard"]; var motherboardname = Session["motherboardname"]; }
                 @if (motherboard != null)
                 {
-                    <p>@motherboardname</p>
+                <p>@motherboardname | <a class="btn btn-primary btn-sm" href="~/MotherBoard/Index">Change Motherboard</a></p>
                 }
                 else
                 {
@@ -58,7 +60,8 @@
                 @{ var memory = Session["memory"]; var memoryname = Session["memoryname"]; }
                 @if (memory != null)
                 {
-                    <p>@memoryname</p>
+                <p>@memoryname | <a class="btn btn-primary btn-sm" href="~/Memory/Index">Change Memory</a></p>
+
                 }
                 else
                 {
@@ -72,7 +75,7 @@
                 @{ var videocard = Session["videocard"]; var videocardname = Session["videocardname"]; }
                 @if (videocard != null)
                 {
-                    <p>@videocardname</p>
+                <p>@videocardname | <a class="btn btn-primary btn-sm" href="~/VideoCard/Index">Change Video Card</a></p>
                 }
                 else
                 {
@@ -87,7 +90,7 @@
                 @{ var storage = Session["storage"]; var storagename = Session["storagename"]; }
                 @if (storage != null)
                 {
-                    <p>@storagename</p>
+                <p>@storagename | <a class="btn btn-primary btn-sm" href="~/Storage/Index">Change Storage</a></p>
                 }
                 else
                 {
@@ -101,7 +104,7 @@
                 @{ var powersupply = Session["powersupply"]; var powersupplyname = Session["powersupplyname"]; }
                 @if (powersupply != null)
                 {
-                    <p>@powersupplyname</p>
+                <p>@powersupplyname | <a class="btn btn-primary btn-sm" href="~/PowerSupply/Index">Change Power Supply</a></p>
                 }
                 else
                 {
@@ -115,7 +118,7 @@
                 @{ var cases = Session["cases"]; var casesname = Session["casesname"]; }
                 @if (cases != null)
                 {
-                    <p>@casesname</p>
+                <p>@casesname | <a class="btn btn-primary btn-sm" href="~/Case/Index">Change Case</a></p>
                 }
                 else
                 {

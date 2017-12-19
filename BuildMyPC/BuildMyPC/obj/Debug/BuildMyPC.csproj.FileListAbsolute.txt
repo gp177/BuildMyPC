@@ -447,3 +447,4 @@ C:\Users\GP\Documents\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.csproj.CoreCompile
 C:\Users\GP\Documents\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.dll
 C:\Users\GP\Documents\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.pdb
 C:\Users\GP\Documents\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.update.resources
+C:\Users\GP\Desktop\School\BuildMyPC\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.update.resources
