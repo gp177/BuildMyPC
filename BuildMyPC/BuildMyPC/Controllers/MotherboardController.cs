@@ -37,6 +37,7 @@ namespace BuildMyPC.Controllers
         public ActionResult Addmotherboard(Motherboard motherboard)
         {
             Session["motherboard"] = motherboard;
+            Session["motherboardname"] = motherboard.Name;
 
             return RedirectToAction("List", "Home");
         }

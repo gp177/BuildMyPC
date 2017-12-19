@@ -38,6 +38,7 @@ namespace BuildMyPC.Controllers
         public ActionResult Addpowersupply(PowerSupply powersupply)
         {
             Session["powersupply"] = powersupply;
+            Session["powersupplyname"] = powersupply.Name;
 
             return RedirectToAction("List", "Home");
         }
