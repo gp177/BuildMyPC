@@ -39,6 +39,7 @@ namespace BuildMyPC.Controllers
         public ActionResult Addmemory(Memory memory)
         {
             Session["memory"] = memory;
+            Session["memoryname"] = memory.Name;
 
             return RedirectToAction("List", "Home");
         }

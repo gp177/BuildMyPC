@@ -37,6 +37,7 @@ namespace BuildMyPC.Controllers
         public ActionResult Addstorage(Storage storage)
         {
             Session["storage"] = storage;
+            Session["storagename"] = storage.Name;
 
             return RedirectToAction("List", "Home");
         }

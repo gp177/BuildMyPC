@@ -365,9 +365,7 @@ D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.csproj.CoreCompileInputs.cac
 D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.dll
 D:\proj_asp\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.pdb
 C:\Users\GP\Desktop\School\BuildMyPC\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.createBuildTable.resources
-<<<<<<< HEAD
 D:\programing\Aps_proj\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.populateStorageTable.resources
 D:\programing\Aps_proj\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.populateVideoCards.resources
-=======
 C:\Users\GP\Desktop\School\BuildMyPC\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.populateStorageTable.resources
->>>>>>> 120dc6e6a957f6bb4a2bafe2e8b562e0418b0671
+C:\Users\GP\Desktop\School\BuildMyPC\BuildMyPC\BuildMyPC\obj\Debug\BuildMyPC.Migrations.populateVideoCards.resources

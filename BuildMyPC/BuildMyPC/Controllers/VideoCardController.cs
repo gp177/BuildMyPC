@@ -38,6 +38,7 @@ namespace BuildMyPC.Controllers
         public ActionResult Addvideocard(VideoCard videocard)
         {
             Session["videocard"] = videocard;
+            Session["videocardname"] = videocard.Name;
 
             return RedirectToAction("List", "Home");
         }

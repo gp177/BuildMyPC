@@ -24,10 +24,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <tr>
             <td>Cpu</td>
             <td>
-                @{ @Model.Cpu = Session["Cpu"]; }
-                @if (Model.Cpu != null)
+                @{ var cpu = Session["Cpu"]; var cpuname = Session["Cpuname"]; }
+                @if (cpu != null)
                 {
-                <p>@Model.Cpu.Name</p>
+                <p>@cpuname</p>
                 }
                 else
                 {
@@ -38,10 +38,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <tr>
             <td>Motherboard</td>
             <td>
-                @{ var motherboard = Session["motherboard"]; }
+                @{ var motherboard = Session["motherboard"]; var motherboardname = Session["motherboardname"]; }
                 @if (motherboard != null)
                 {
-                    <p>test</p>
+                    <p>@motherboardname</p>
                 }
                 else
                 {
@@ -52,10 +52,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <tr>
             <td>Memory</td>
             <td>
-                @{ var memory = Session["memory"]; }
+                @{ var memory = Session["memory"]; var memoryname = Session["memoryname"]; }
                 @if (memory != null)
                 {
-                    <p>test</p>
+                    <p>@memoryname</p>
                 }
                 else
                 {
@@ -66,10 +66,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <tr>
             <td>Video Card</td>
             <td>
-                @{ var videocard = Session["videocard"]; }
+                @{ var videocard = Session["videocard"]; var videocardname = Session["videocardname"]; }
                 @if (videocard != null)
                 {
-                    <p>test</p>
+                    <p>@videocardname</p>
                 }
                 else
                 {
@@ -81,10 +81,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
             <td>Storage</td>
             <td>
 
-                @{ var storage = Session["storage"]; }
+                @{ var storage = Session["storage"]; var storagename = Session["storagename"]; }
                 @if (storage != null)
                 {
-                    <p>test</p>
+                    <p>@storagename</p>
                 }
                 else
                 {
@@ -95,10 +95,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <tr>
             <td>Power Supply</td>
             <td>
-                @{ var powersupply = Session["powersupply"]; }
+                @{ var powersupply = Session["powersupply"]; var powersupplyname = Session["powersupplyname"]; }
                 @if (powersupply != null)
                 {
-                    <p>test</p>
+                    <p>@powersupplyname</p>
                 }
                 else
                 {
@@ -109,10 +109,10 @@ Layout = "~/Views/Shared/_Layout.cshtml";
         <tr>
             <td>Case</td>
             <td>
-                @{ var cases = Session["cases"]; }
+                @{ var cases = Session["cases"]; var casesname = Session["casesname"]; }
                 @if (cases != null)
                 {
-                    <p>test</p>
+                    <p>@casesname</p>
                 }
                 else
                 {
