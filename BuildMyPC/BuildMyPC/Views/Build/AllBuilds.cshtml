@@ -6,20 +6,20 @@
 
 <table class="table table-condensed">
     <tr>
-        <th> Models Id
+        <th> Build Id
         </th>
         <th>
-            Ditails
-        <th>
+            Details
+<th>
     </tr>
     @foreach (var item in Model)
     {
-        <tr>
-            <td> @item.Id</td>
-            <td>
-                Ditails
-            </td>
-        </tr>
+    <tr>
+        <td> @item.Id</td>
+        <td>
+        <td>@Html.ActionLink("Details", "Details", "Build", new { id = item.Id }, null)</td>
+        </td>
+    </tr>
     }
 
 

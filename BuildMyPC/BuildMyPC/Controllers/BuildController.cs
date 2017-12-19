@@ -79,8 +79,8 @@ namespace BuildMyPC.Controllers
 
             _context.Builds.Add(build);
             _context.SaveChanges();
-            
-            return View("AllBuilds");
+
+            return RedirectToAction("AllBuilds");
         }
 
         public ActionResult AllBuilds()
@@ -89,7 +89,18 @@ namespace BuildMyPC.Controllers
             return View(builds);
         }
 
+        public ActionResult Details(int id)
+        {
+            
+            var builds = _context.Builds.SingleOrDefault(c => c.Id == id);
 
+            if (builds == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(builds);
+        }
 
 
     }
