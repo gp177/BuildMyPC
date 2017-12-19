@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using BuildMyPC.Models;
 using BuildMyPC.ViewModels;
+using System.Data.Entity;
 
 namespace BuildMyPC.Controllers
 {
@@ -79,7 +80,7 @@ namespace BuildMyPC.Controllers
 
             _context.Builds.Add(build);
             _context.SaveChanges();
-            
+
             return RedirectToAction("AllBuilds");
         }
 
@@ -89,7 +90,25 @@ namespace BuildMyPC.Controllers
             return View(builds);
         }
 
+        public ActionResult Details(int id)
+        {
 
+            var builds = _context.Builds.Include(m => m.CPU)
+                                        .Include(m => m.Memory)
+                                        .Include(m => m.Motherboard)
+                                        .Include(m => m.Case)
+                                        .Include(m => m.PowerSupply)
+                                        .Include(m => m.VideoCard)
+                                        .Include(m => m.Storage)
+                                        .SingleOrDefault(m => m.Id == id);
+
+            if (builds == null)
+            {
+                return HttpNotFound();
+            }
+
+            return View(builds);
+        }
 
 
     }
