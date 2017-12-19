@@ -83,5 +83,14 @@ namespace BuildMyPC.Controllers
             return View("AllBuilds");
         }
 
+        public ActionResult AllBuilds()
+        {
+            var builds = _context.Builds.ToList();
+            return View(builds);
+        }
+
+
+
+
     }
 }

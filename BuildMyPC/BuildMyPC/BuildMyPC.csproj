@@ -323,6 +323,7 @@
     <Content Include="Views\Home\List.cshtml" />
     <Content Include="Views\Home\Share.cshtml" />
     <Content Include="Views\Build\Index.cshtml" />
+    <Content Include="Views\Build\AllBuilds.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

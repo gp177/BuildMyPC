@@ -1,0 +1,27 @@
+﻿@model IEnumerable<BuildMyPC.Models.Build>
+@{
+    ViewBag.Title = "AllBuilds";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-condensed">
+    <tr>
+        <th> Models Id
+        </th>
+        <th>
+            Ditails
+        <th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.Id</td>
+            <td>
+                Ditails
+            </td>
+        </tr>
+    }
+
+
+</table>
+
