@@ -1,0 +1,16 @@
+﻿@model BuildMyPC.Models.Storage
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h3>@Model.Name</h3>
+<ul>
+    <li>Brand: @Model.Brand.BrandName</li>
+    <li>Form: @Model.Form"</li>
+    <li>Size: @Model.Size GB</li>
+    <li>Price: $@Model.Price</li>
+</ul>
+
+@Html.ActionLink("Back to List", "Index", "Storage")
+

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<BuildMyPC.Models.Case>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Select a Case</h2>
+
+@if (!Model.Any())
+{
+    <p>There are no Cases availble.</p>
+}
+
+else
+{
+
+    <table class="table table-dark table-hover">
+        <thread>
+            <tr>
+                <th>Cases (Click for Details)</th>
+                <th>Tower Type</th>
+                <th>Comes with PowerSupply</th>
+                <th>Price</th>
+                <th>Action</th>
+
+
+            </tr>
+        </thread>
+        <tbody>
+
+            @foreach (var cases in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(cases.Name, "Details", "Case", new { id = cases.Id }, null)</td>
+                    <td>@cases.TowerType</td>
+                    <td>@cases.ComesWithPowerSupply</td>
+                    <td>$@cases.Price </td>
+                    <td>@Html.ActionLink("Add Case", "AddCase", "Case",cases, null)</td>
+
+</tr>
+            }
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+
+
+}
+

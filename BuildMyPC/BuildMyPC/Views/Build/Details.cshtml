@@ -1,0 +1,25 @@
+﻿@model BuildMyPC.Models.Build
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<hr />
+<ul>
+
+    <li>Cpu: @Model.CPU.Name</li>
+    <li>Memory: @Model.Memory.Name</li>
+    <li>Mothrboard: @Model.Motherboard.Name</li>
+    <li>Video Card: @Model.VideoCard.Name</li>
+    <li>Storage: @Model.Storage.Name</li>
+    <li>Power Supply: @Model.PowerSupply.Name</li>
+    <li>Case: @Model.Case.Name</li>
+
+</ul>
+
+<br />
+<hr />
+
+@Html.ActionLink("Back to List", "AllBuilds", "Build")
