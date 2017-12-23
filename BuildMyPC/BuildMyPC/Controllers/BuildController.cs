@@ -110,6 +110,44 @@ namespace BuildMyPC.Controllers
             return View(builds);
         }
 
+        [Authorize]
+        public ActionResult Delete(int? id)
+        {
+
+            if (id.HasValue)
+            {
+
+                var builds = _context.Builds.Find(id);
+
+                if (builds == null)
+                {
+                    return HttpNotFound();
+                }
+
+              
+
+                return View(builds);
+            }
+            return HttpNotFound();
+        }
+
+
+        // POST: DELETE
+
+        [HttpPost]
+        [Authorize]
+        public ActionResult Delete(int id)
+        {
+
+            var builds = _context.Builds.Find(id);
+
+            _context.Builds.Remove(builds);
+            _context.SaveChanges();
+
+
+            return RedirectToAction("AllBuilds");
+        }
+
 
     }
 }
